@@ -1,7 +1,9 @@
 class Solution:
     def missingNumber(self, nums: list[int]) -> int:
         length = len(nums)
-        return (length * (length + 1)) // 2 - sum(nums)
+        gaussSum = (length * (length + 1)) // 2  # Calculates arithmetic
+        listSum = sum(nums)
+        return gaussSum - listSum
 
 
 exampleInputs = [
