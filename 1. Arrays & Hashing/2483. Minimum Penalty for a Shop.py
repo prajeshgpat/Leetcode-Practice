@@ -1,19 +1,20 @@
 class Solution:
     def bestClosingTime(self, customers: str) -> int:
-        penalty = 0
-        index = 0
-        for open in [*customers]:
-            if open == "N":
-                penalty += 1
-                return index
-            index += 1
-        return index
+        score = 0
+        bestScore = 0
+        closingTime = -1
+        for hour in range(len(customers)):
+            if customers[hour] == "Y":
+                score += 1
+            else:
+                score -= 1
+
+            if score > bestScore:
+                bestScore = score
+                closingTime = hour
+        return closingTime + 1
 
 
-testInputs = [
-    "YYNY",  # 2
-    "NNNNN",  # 0
-    "YYYY",  # 4
-]
+testInputs = ["YYNY", "NNNNN", "YYYY", "YNYY"]  # 2  # 0  # 4  # 4
 for string in testInputs:
     print(Solution().bestClosingTime(string))
