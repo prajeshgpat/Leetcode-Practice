@@ -16,5 +16,5 @@ class Solution:
 
 
 testInputs = ["YYNY", "NNNNN", "YYYY", "YNYY"]  # 2  # 0  # 4  # 4
-for string in testInputs:
-    print(Solution().bestClosingTime(string))
+for customers in testInputs:
+    print(Solution().bestClosingTime(customers))
