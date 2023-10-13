@@ -1,4 +1,4 @@
-# Pascal's triangle
+# Pascal's triangle python 3 code
 class Solution:
     def generate(self, numRows: int) -> list[list[int]]:
         pascal = [[1]]
