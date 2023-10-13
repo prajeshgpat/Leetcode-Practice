@@ -1,3 +1,4 @@
+# Pascal's triangle
 class Solution:
     def generate(self, numRows: int) -> list[list[int]]:
         pascal = [[1]]
